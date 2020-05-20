@@ -1,29 +1,33 @@
 window.addEventListener('load', start);
 
+var globalRed = 0;
+var globalGreen = 0;
+var globalBlue = 0;
+
 function start() {
   console.log('Page ready.');
 }
 
 function redInput() {
-  rangeRed = document.querySelector('#range-red').value;
+  globalRed = document.querySelector('#range-red').value;
 
-  document.querySelector('#text-red').value = rangeRed;
+  document.querySelector('#text-red').value = globalRed;
 
   simulateColors();
 }
 
 function greenInput() {
-  rangeGreen = document.querySelector('#range-green').value;
+  globalGreen = document.querySelector('#range-green').value;
 
-  document.querySelector('#text-green').value = rangeGreen;
+  document.querySelector('#text-green').value = globalGreen;
 
   simulateColors();
 }
 
 function blueInput() {
-  rangeBlue = document.querySelector('#range-blue').value;
+  globalBlue = document.querySelector('#range-blue').value;
 
-  document.querySelector('#text-blue').value = rangeBlue;
+  document.querySelector('#text-blue').value = globalBlue;
 
   simulateColors();
 }
@@ -32,5 +36,11 @@ function simulateColors() {
   simulator = document.querySelector('#simulator');
 
   simulator.style.backgroundColor =
-    'rgb(' + this.rangeRed + ',' + this.rangeGreen + ',' + this.rangeBlue + ')';
+    'rgb(' +
+    this.globalRed +
+    ',' +
+    this.globalGreen +
+    ',' +
+    this.globalBlue +
+    ')';
 }
