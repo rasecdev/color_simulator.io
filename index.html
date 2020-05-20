@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Simulador de Cores</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulador de cores com o RGB</h1>
+      <h3>
+        Utilize os seletores de cores para que o Simulador possa encontrar a cor
+        desejada.
+      </h3>
+      <hr />
+
+      <div class="ranges">
+        <div class="range">
+          <h2 class="red">(R) Vermelho:</h2>
+          <input type="range" id="range-red" value="0" min="0" max="255" onchange="redInput()"/>
+          <input type="text" id="text-red" value="0" disabled="disabled" />
+        </div>
+
+        <div class="range">
+          <h2 class="green">(G) Verde:</h2>
+          <input type="range" id="range-green" value="0" min="0" max="255" onchange="greenInput()"/>
+          <input type="text" id="text-green" value="0" disabled="disabled" />
+        </div>
+
+      <div class="range">
+        <h2 class="blue">(B) Azul:</h2>
+        <input type="range" id="range-blue" value="0" min="0" max="255" onchange="blueInput()"/>
+        <input type="text" id="text-blue" value="0" disabled="disabled" />
+      </div>
+
+      <div class="colors-simulator">
+        <div id="simulator"></div>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
