@@ -36,11 +36,6 @@ function simulateColors() {
   simulator = document.querySelector('#simulator');
 
   simulator.style.backgroundColor =
-    'rgb(' +
-    this.globalRed +
-    ',' +
-    this.globalGreen +
-    ',' +
-    this.globalBlue +
-    ')';
+    //prettier.ignore
+    `rgb( ${this.globalRed}, ${this.globalGreen}, ${this.globalBlue} )`;
 }
